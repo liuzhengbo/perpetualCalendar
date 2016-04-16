@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="liuzhengbo" />
+    <title>万年历</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <!-- <div class="g-hd">
+        <h2>万年历</h2>
+    </div> -->
+    <div class="g-bd">
+        <div class="m-calendar-widget">
+            <div class="m-calendar">
+                <div class="m-hint-bar">
+                    <div class="m-control-bar">
+                        <div class="m-year-box">
+                            <a id="preYear" class="m-btn m-btn-pre">&lt;</a>
+                            <select id="year" class="m-drop">
+                            </select>
+                            <a id="nextYear" class="m-btn m-btn-next">&gt;</a>
+                        </div>
+                        <div class="m-month-box">
+                            <a id="preMonth" class="m-btn m-btn-pre">&lt;</a>
+                            <select id="month" class="m-drop">
+                            </select>
+                            <a id="nextMonth" class="m-btn m-btn-next">&gt;</a>
+                        </div>
+                        <div class="m-holiday-box">
+                            <select id="holiday" class="m-drop">
+                            </select>
+                        </div>
+                        <a id="returnToday" class="m-btn-today" href="#">返回今天</a>
+                    </div>
+                    <div class="m-time-panel">
+                        北京时间:
+                        <span class="m-time-monitor"></span>
+                    </div>
+                </div>
+                <div class="m-calendar-main">
+                    <div class="m-col-1 m-dates">
+                        <ul class="m-dates-hd">
+                            <li class="m-days-title">一</li>
+                            <li class="m-days-title">二</li>
+                            <li class="m-days-title">三</li>
+                            <li class="m-days-title">四</li>
+                            <li class="m-days-title">五</li>
+                            <li class="m-days-title m-weekend">六</li>
+                            <li class="m-days-title m-weekend m-last">日</li>
+                        </ul>
+                        <ul class="m-dates-bd">
+                        </ul>
+                    </div>
+                    <div class="m-col-2 m-almanac">
+                        <p class="m-almanac-right-date"></p>
+                        <p class="m-almanac-right-day"></p>
+                        <p class="m-almanac-right-lunar">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="g-ft">
+        copyright@刘郑博
+    </div> -->
+    <script type="text/javascript" src="js/Task.js"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+        var calendar = Task.Calendar;
+        calendar.init();
+    };
+    </script>
+</body>
+
+</html>

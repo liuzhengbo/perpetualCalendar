@@ -1,0 +1,442 @@
+/* ========================================================================== */
+
+
+/* 取消默认样式 */
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================================== */
+
+
+/* 页面主体 */
+
+.g-bd {
+    width: 558px;
+    margin: 0 auto;
+    /* border: 2px solid #55AAFF; */
+    font-family: Microsoft YaHei, Microsoft JhengHei, Simsun, Simhei, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+/* 整个日历组件 */
+
+.m-calendar-widget {
+    position: relative;
+    height: 425px;
+    z-index: 0;
+    line-height: 18px;
+    font-size: 13px;
+}
+
+
+/* 日历组件子元素 */
+
+.m-calendar {
+    background: #f9f5f1;
+}
+
+
+/* =============================日历上方部分======================================= */
+
+
+/* 主栏上方的整个工具栏 */
+
+.m-hint-bar {
+    position: relative;
+    border-collapse: collapse;
+    background-color: #f3f5fa;
+    overflow: auto;
+}
+
+
+/* -----------主栏上方的工具栏左侧的搜索栏-------------*/
+
+.m-control-bar {
+    float: left;
+    width: 400px;
+    height: 23px;
+    line-height: 23px;
+    padding: 10px 5px;
+}
+
+
+/* -----------年、月、假期安排box--------------------- */
+
+.m-year-box,
+.m-month-box {
+    float: left;
+    position: relative;
+    width: 70px;
+    height: 23px;
+    /* border: 1px solid #999; */
+    /* border-bottom-color: #d8d8d8; */
+    padding: 0 22px;
+    margin-right: 6px;
+    text-align: center;
+}
+
+.m-month-box {
+    width: 55px;
+}
+
+.m-holiday-box {
+    float: left;
+    position: relative;
+    width: 85px;
+    height: 23px;
+    /* border: 1px solid #999; */
+    /* border-bottom-color: #d8d8d8; */
+    margin-right: 5px;
+    text-align: center;
+}
+
+
+/* -----------m-control-bar中的下拉框统一样式-------------- */
+
+.m-drop {
+    position: relative;
+    border: 1px solid #999;
+    border-bottom-color: #d8d8d8;
+    outline: none;
+    /* box-sizing: content-box; */
+    /* border: none; */
+    /* border-top: 1px solid #999; */
+    /* border-bottom: 1px solid #d8d8d8; */
+    height: 25px;
+    line-height: 25px;
+    width: 100%;
+    background: #fff;
+    font-size: inherit;
+    z-index: 202;
+}
+
+.m-drop:hover {
+    box-shadow: inset 1px 1px 0px 0px #d8d8d8;
+    -webkit-box-shadow: inset 1px 1px 0px 0px #d8d8d8;
+    -moz-box-shadow: inset 1px 1px 0 0 #d8d8d8;
+}
+
+
+/* --------------m-control-bar中的上一个、下一个按钮通用样式 --------------*/
+
+.m-btn {
+    position: absolute;
+    top: 0;
+    display: block;
+    border: 1px solid #999;
+    border-bottom-color: #d8d8d8;
+    background: #fff;
+    width: 21px;
+    height: 23px;
+    line-height: 23px;
+    color: #7a7a7a;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: Simsun, Simhei, sans-serif;
+    cursor: pointer;
+    z-index: 205;
+}
+
+
+/* ------------上一个按钮样式-------------- */
+
+.m-btn-pre {
+    left: 0;
+    border-right: 1px solid #d8d8d8;
+}
+
+.m-btn-pre:hover {
+    color: #55AAFF;
+    border: 1px solid #55AAFF;
+}
+
+
+/* -------------下一个按钮样式------------- */
+
+.m-btn-next {
+    right: 0;
+    border-left: 1px solid #d8d8d8;
+}
+
+.m-btn-next:hover {
+    color: #55AAFF;
+    border: 1px solid #55AAFF;
+}
+
+
+/* ---------------返回今天按钮--------------- */
+
+.m-btn-today {
+    display: inline-block;
+    margin: 0;
+    padding: 0 14px;
+    height: 23px;
+    line-height: 23px;
+    border: 1px solid #d8d8d8;
+    background-color: #f9f9f9;
+    text-decoration: none;
+    color: #000;
+}
+
+.m-btn-today:hover {
+    border: 1px solid #55AAFF;
+}
+
+.m-btn-today:active {
+    border: 1px solid #A2A2A2;
+    background: #EAEAEA;
+    box-shadow: inset 1px 1px 0px 0px #d8d8d8;
+    -webkit-box-shadow: inset 1px 1px 0px 0px #d8d8d8;
+    -moz-box-shadow: inset 1px 1px 0 0 #d8d8d8;
+}
+
+
+/* -------------------时钟------------------- */
+
+.m-time-panel {
+    float: right;
+    padding: 10px 5px;
+    width: 125px;
+    height: 23px;
+    line-height: 23px;
+    color: #999;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+/* =============================日历下方部分===================================== */
+
+
+/* -----------日历下方主栏-------- */
+
+.m-calendar-main {
+    background: #fff;
+    overflow: auto;
+}
+
+
+/* ----------左侧列--------- */
+
+.m-col-1 {
+    width: 408px;
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+/* ---------右侧列----------- */
+
+.m-col-2 {
+    width: 150px;
+    float: right;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+/* ------------左侧列的子元素-------- */
+
+.m-dates {
+    height: 390px;
+    border: 1px solid #d2d2d2;
+    z-index: 1;
+}
+
+
+/* --------右侧列的子元素-------- */
+
+.m-almanac {
+    height: 390px;
+    border-left: none;
+    background: #55AAFF;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* --------左侧列子元素的标题---------- */
+
+.m-days-title {
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 58px;
+    /* padding-top: 14px; */
+    /* padding-bottom: 12px; */
+    height: 40px;
+    line-height: 40px;
+    border-right: 1px solid #f1ebe4;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* ---------左侧列子元素的正文----------- */
+
+.m-dates-bd li {
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding-top: 10px;
+    width: 58px;
+    height: 58px;
+    background: #fff;
+    border-right: 1px solid #f1ebe4;
+    border-top: 1px solid #f1ebe4;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 205;
+}
+
+.m-dates-bd li:hover {
+    border: 3px solid #FFBB00;
+}
+
+.m-dates-bd li.m-selected {
+    border: 3px solid #FFBB00;
+}
+
+
+/*----------- 一行中最后一个box的样式----------*/
+
+.m-dates .m-last {
+    border-right: 0;
+}
+
+
+/* ----------双休日样式------------- */
+
+.m-weekend>.m-solar {
+    color: #e02d2d;
+}
+
+
+/* ------------节气样式---------- */
+
+.m-dates-bd span.m-solar-term {
+    color: #e02d2d;
+}
+
+
+/* --------跨月的box的样式--------- */
+
+ul.m-dates-bd>li.m-cross-month {
+    background: #f5f5f5;
+    color: #999;
+    opacity: .6;
+}
+
+ul.m-dates-bd>li.m-cross-month>span.m-lunar {
+    color: #999;
+}
+
+
+/* ------每个box中的阳历样式------- */
+
+.m-dates-bd .m-solar {
+    width: 100%;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+/* -------每个box中的阴历样式-------- */
+
+.m-dates-bd .m-lunar {
+    display: block;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    color: #999;
+}
+
+
+/* ---------节假日休、班的样式---------- */
+
+.m-dates-bd .m-border-off {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    color: #fff;
+    background: #f43;
+    text-align: center;
+    overflow: hidden;
+    font-size: 13px;
+}
+
+.m-dates-bd .m-border-work {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    color: #fff;
+    background: #969799;
+    text-align: center;
+    overflow: hidden;
+    font-size: 13px;
+}
+
+.m-dates-bd .m-holiday-off,
+.m-dates-bd .m-holiday-work {
+    background: #FFF0F0;
+}
+
+
+/* -------------今天的日期样式--------------- */
+
+.m-dates>ul.m-dates-bd>li.m-today {
+    background: #FFBB00;
+    color: #fff;
+}
+
+.m-dates>ul.m-dates-bd>li.m-today>.m-lunar {
+    color: #fff;
+}
+
+
+/* -------------右侧列正文----------------- */
+
+.m-almanac>.m-almanac-right-date {
+    height: 48px;
+    line-height: 48px;
+}
+
+.m-almanac>.m-almanac-right-day {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    margin: 5px auto;
+    line-height: 76px;
+    font-size: 52px;
+    background: #fb0;
+    border-radius: 3px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .1), -1px 2px 5px rgba(0, 0, 0, .1);
+}
+
+.m-almanac>.m-almanac-right-lunar>span {
+    display: block;
+}
